@@ -11,6 +11,9 @@ if [ `id -u` -ne 0 ]; then
 	exit 1
 fi
 
+# regenerate /var/lib/dbus/machine-id
+dbus-uuidgen --ensure
+
 # Change the VM name
 echo -n "Set the name of this VM: "
 read vm_name_input
@@ -36,9 +39,6 @@ apt -y full-upgrade
 
 # regenerate ssh host keys
 test -f /etc/ssh/ssh_host_rsa_key || dpkg-reconfigure openssh-server
-
-# regenerate /var/lib/dbus/machine-id
-dbus-uuidgen --ensure
 
 rm $this_file
 
