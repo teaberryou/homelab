@@ -29,7 +29,7 @@ apt update
 apt -y full-upgrade
 
 #install packages
-apt install -y qemu-guest-agent chrony
+apt install -y qemu-guest-agent
 
 #flush the logs
 logrotate -f /etc/logrotate.conf
