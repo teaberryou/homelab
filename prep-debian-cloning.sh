@@ -15,7 +15,7 @@ fi
 
 cd ~
 
-wget -O run_first.sh "https://github.com/teaberryou/homelab/blob/07fff1bcc80faa91f2cb063f762bfc147389e1af/run_first.sh?raw=true"
+wget -O run_first.sh "https://raw.githubusercontent.com/teaberryou/homelab/main/run_first.sh"
 chmod +rwx run_first.sh
 chown $this_user:$this_user run_first.sh
 
