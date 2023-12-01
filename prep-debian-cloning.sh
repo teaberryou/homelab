@@ -15,14 +15,14 @@ fi
 
 cd ~
 
-wget https://script_server/scripts/run_first.sh
+wget -O run_first.sh "https://github.com/teaberryou/homelab/blob/14390402378ae09c07db72619e57ba46d0a66bf9/run_first.sh?raw=true"
 chmod +rwx run_first.sh
 chown $this_user:$this_user run_first.sh
 
-wget https://script_server/scripts/sshd_config
+#wget https://script_server/scripts/sshd_config
 
-cat sshd_config > /etc/ssh/sshd_config
-rm sshd_config
+#cat sshd_config > /etc/ssh/sshd_config
+#rm sshd_config
 
 #update apt-cache
 apt update
